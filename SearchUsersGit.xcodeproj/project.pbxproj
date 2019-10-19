@@ -106,6 +106,9 @@
 		9A2D5BAB235B980C00772C5A /* SearchUsersGit */ = {
 			isa = PBXGroup;
 			children = (
+				9A2D5BE7235B986000772C5A /* Views */,
+				9A2D5BE6235B985400772C5A /* Controllers */,
+				9A2D5BE4235B983200772C5A /* Model */,
 				9A2D5BAC235B980C00772C5A /* AppDelegate.h */,
 				9A2D5BAD235B980C00772C5A /* AppDelegate.m */,
 				9A2D5BAF235B980C00772C5A /* SceneDelegate.h */,
@@ -138,6 +141,27 @@
 				9A2D5BD8235B980E00772C5A /* Info.plist */,
 			);
 			path = SearchUsersGitUITests;
+			sourceTree = "<group>";
+		};
+		9A2D5BE4235B983200772C5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A2D5BE6235B985400772C5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9A2D5BE7235B986000772C5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
