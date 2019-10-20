@@ -23,13 +23,18 @@
     self.txtFIeldUser.delegate = self;
     self.txtFieldPassword.delegate = self;
     [self setScrollview];
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardWillHide:)];
-    [self.scrollView addGestureRecognizer:tapGestureRecognizer];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    self.txtFIeldUser.text = @"";
+    self.txtFieldPassword.text = @"";
 }
 
 - (IBAction)actLogin:(id)sender {
     if ([self.txtFIeldUser.text isEqualToString:@"nuvolar"] && [self.txtFieldPassword.text isEqualToString:@"nuvolar123"]) {
-        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"Users"];
+        [self presentViewController:vc animated:YES completion:nil];
     } else {
         UIAlertController *alertController = [UtilsViewController showAlertLoginError];
         [self presentViewController:alertController animated:YES completion:nil];
@@ -38,17 +43,12 @@
 
 #pragma mark - TextField Delegates
 
-// This method is called once we click inside the textField
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
-   NSLog(@"Text field did begin editing");
 }
 
-// This method is called once we complete editing
 -(void)textFieldDidEndEditing:(UITextField *)textField {
-   NSLog(@"Text field ended editing");
 }
 
-// This method enables or disables the processing of return key
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
    [textField resignFirstResponder];
    return YES;
@@ -72,6 +72,9 @@
       [[NSNotificationCenter defaultCenter] addObserver:self
       selector:@selector(keyboardWillHide:)
       name:UIKeyboardWillHideNotification object:nil];
+    
+      UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardWillHide:)];
+     [self.scrollView addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void) keyboardWillShow:(NSNotification *) notification {

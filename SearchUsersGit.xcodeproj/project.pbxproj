@@ -20,6 +20,8 @@
 		9AD1036B235CAC0300545ADD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10369235CAC0200545ADD /* SceneDelegate.m */; };
 		9AD1036E235CAF0E00545ADD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1036D235CAF0E00545ADD /* LoginViewController.m */; };
 		9AD10375235CB13C00545ADD /* UtilsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10374235CB13C00545ADD /* UtilsViewController.m */; };
+		9AF87DDC235CCA09001E5B79 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87DDB235CCA09001E5B79 /* UsersViewController.m */; };
+		9AF87DE1235CCDE8001E5B79 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87DE0235CCDE8001E5B79 /* ApiClient.m */; };
 		F6A0538397C7EAF006739622 /* Pods_SearchUsersGit_SearchUsersGitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31AE92D0B5E86E1D456EFA4 /* Pods_SearchUsersGit_SearchUsersGitUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,10 @@
 		9AD1036D235CAF0E00545ADD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9AD10373235CB13C00545ADD /* UtilsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsViewController.h; sourceTree = "<group>"; };
 		9AD10374235CB13C00545ADD /* UtilsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UtilsViewController.m; sourceTree = "<group>"; };
+		9AF87DDA235CCA09001E5B79 /* UsersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		9AF87DDB235CCA09001E5B79 /* UsersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
+		9AF87DDF235CCDE8001E5B79 /* ApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		9AF87DE0235CCDE8001E5B79 /* ApiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
 		B23668498B03DA5A34132694 /* Pods_SearchUsersGitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchUsersGitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B454160B68AEFFB7B9C54EED /* Pods-SearchUsersGit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchUsersGit.debug.xcconfig"; path = "Target Support Files/Pods-SearchUsersGit/Pods-SearchUsersGit.debug.xcconfig"; sourceTree = "<group>"; };
 		D61F8CA688CAD0D1E3FE8F3E /* Pods-SearchUsersGit-SearchUsersGitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchUsersGit-SearchUsersGitUITests.debug.xcconfig"; path = "Target Support Files/Pods-SearchUsersGit-SearchUsersGitUITests/Pods-SearchUsersGit-SearchUsersGitUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 		9A2D5BE4235B983200772C5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AF87DDE235CCDD3001E5B79 /* ApiClient */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +188,8 @@
 		9A2D5BE6235B985400772C5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AF87DDD235CCDC8001E5B79 /* DetailViewController */,
+				9AF87DD9235CC9EC001E5B79 /* UserViewController */,
 				9AD10365235B9ABE00545ADD /* LoginViewController */,
 			);
 			path = Controllers;
@@ -202,6 +211,31 @@
 				9AD10374235CB13C00545ADD /* UtilsViewController.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9AF87DD9235CC9EC001E5B79 /* UserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87DDA235CCA09001E5B79 /* UsersViewController.h */,
+				9AF87DDB235CCA09001E5B79 /* UsersViewController.m */,
+			);
+			path = UserViewController;
+			sourceTree = "<group>";
+		};
+		9AF87DDD235CCDC8001E5B79 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		9AF87DDE235CCDD3001E5B79 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87DDF235CCDE8001E5B79 /* ApiClient.h */,
+				9AF87DE0235CCDE8001E5B79 /* ApiClient.m */,
+			);
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 		A2607235121B726FC9C31260 /* Pods */ = {
@@ -455,12 +489,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF87DDC235CCA09001E5B79 /* UsersViewController.m in Sources */,
 				9AD1036B235CAC0300545ADD /* SceneDelegate.m in Sources */,
 				9A2D5BC2235B980E00772C5A /* main.m in Sources */,
 				9A2D5BAE235B980C00772C5A /* AppDelegate.m in Sources */,
 				9A2D5BBA235B980C00772C5A /* SearchUsersGit.xcdatamodeld in Sources */,
 				9AD10375235CB13C00545ADD /* UtilsViewController.m in Sources */,
 				9AD1036E235CAF0E00545ADD /* LoginViewController.m in Sources */,
+				9AF87DE1235CCDE8001E5B79 /* ApiClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
