@@ -1,0 +1,6 @@
+framework module Pods_SearchUsersGit {
+  umbrella header "Pods-SearchUsersGit-umbrella.h"
+
+  export *
+  module * { export * }
+}

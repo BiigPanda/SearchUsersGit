@@ -1,0 +1,6 @@
+framework module Pods_SearchUsersGit_SearchUsersGitUITests {
+  umbrella header "Pods-SearchUsersGit-SearchUsersGitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

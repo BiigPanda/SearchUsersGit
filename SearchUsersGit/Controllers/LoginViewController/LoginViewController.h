@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  SearchUsersGit
 //
 //  Created by Marc Gallardo on 19/10/2019.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
 
+@interface LoginViewController : UIViewController
 
 @end
+
 
