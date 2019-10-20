@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "UserMainTableViewCell.h"
 
-
-@interface UsersViewController : UIViewController
-
+@interface UsersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> 
+@property (weak, nonatomic) NSMutableArray *allUsers;
 @end
 

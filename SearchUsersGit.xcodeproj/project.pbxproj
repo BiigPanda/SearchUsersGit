@@ -22,6 +22,9 @@
 		9AD10375235CB13C00545ADD /* UtilsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10374235CB13C00545ADD /* UtilsViewController.m */; };
 		9AF87DDC235CCA09001E5B79 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87DDB235CCA09001E5B79 /* UsersViewController.m */; };
 		9AF87DE1235CCDE8001E5B79 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87DE0235CCDE8001E5B79 /* ApiClient.m */; };
+		9AF87DE5235CE59F001E5B79 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87DE4235CE59F001E5B79 /* User.m */; };
+		9AF87DEB235CEC5F001E5B79 /* UserMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF87DE9235CEC5F001E5B79 /* UserMainTableViewCell.m */; };
+		9AF87DEC235CEC5F001E5B79 /* UserMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF87DEA235CEC5F001E5B79 /* UserMainTableViewCell.xib */; };
 		F6A0538397C7EAF006739622 /* Pods_SearchUsersGit_SearchUsersGitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31AE92D0B5E86E1D456EFA4 /* Pods_SearchUsersGit_SearchUsersGitUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,11 @@
 		9AF87DDB235CCA09001E5B79 /* UsersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		9AF87DDF235CCDE8001E5B79 /* ApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		9AF87DE0235CCDE8001E5B79 /* ApiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		9AF87DE3235CE59F001E5B79 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		9AF87DE4235CE59F001E5B79 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		9AF87DE8235CEC5F001E5B79 /* UserMainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserMainTableViewCell.h; sourceTree = "<group>"; };
+		9AF87DE9235CEC5F001E5B79 /* UserMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserMainTableViewCell.m; sourceTree = "<group>"; };
+		9AF87DEA235CEC5F001E5B79 /* UserMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserMainTableViewCell.xib; sourceTree = "<group>"; };
 		B23668498B03DA5A34132694 /* Pods_SearchUsersGitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchUsersGitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B454160B68AEFFB7B9C54EED /* Pods-SearchUsersGit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchUsersGit.debug.xcconfig"; path = "Target Support Files/Pods-SearchUsersGit/Pods-SearchUsersGit.debug.xcconfig"; sourceTree = "<group>"; };
 		D61F8CA688CAD0D1E3FE8F3E /* Pods-SearchUsersGit-SearchUsersGitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchUsersGit-SearchUsersGitUITests.debug.xcconfig"; path = "Target Support Files/Pods-SearchUsersGit-SearchUsersGitUITests/Pods-SearchUsersGit-SearchUsersGitUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 		9A2D5BAB235B980C00772C5A /* SearchUsersGit */ = {
 			isa = PBXGroup;
 			children = (
+				9AF87DE6235CEC22001E5B79 /* Cells */,
 				9AD1036F235CB0D800545ADD /* Utils */,
 				9A2D5BE6235B985400772C5A /* Controllers */,
 				9A2D5BE4235B983200772C5A /* Model */,
@@ -180,6 +189,7 @@
 		9A2D5BE4235B983200772C5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AF87DE2235CE58B001E5B79 /* User */,
 				9AF87DDE235CCDD3001E5B79 /* ApiClient */,
 			);
 			path = Model;
@@ -236,6 +246,33 @@
 				9AF87DE0235CCDE8001E5B79 /* ApiClient.m */,
 			);
 			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		9AF87DE2235CE58B001E5B79 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87DE3235CE59F001E5B79 /* User.h */,
+				9AF87DE4235CE59F001E5B79 /* User.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		9AF87DE6235CEC22001E5B79 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87DE7235CEC2B001E5B79 /* CellMainUser */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9AF87DE7235CEC2B001E5B79 /* CellMainUser */ = {
+			isa = PBXGroup;
+			children = (
+				9AF87DE8235CEC5F001E5B79 /* UserMainTableViewCell.h */,
+				9AF87DE9235CEC5F001E5B79 /* UserMainTableViewCell.m */,
+				9AF87DEA235CEC5F001E5B79 /* UserMainTableViewCell.xib */,
+			);
+			path = CellMainUser;
 			sourceTree = "<group>";
 		};
 		A2607235121B726FC9C31260 /* Pods */ = {
@@ -360,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2D5BBF235B980E00772C5A /* LaunchScreen.storyboard in Resources */,
+				9AF87DEC235CEC5F001E5B79 /* UserMainTableViewCell.xib in Resources */,
 				9A2D5BBC235B980E00772C5A /* Assets.xcassets in Resources */,
 				9A2D5BB7235B980C00772C5A /* Main.storyboard in Resources */,
 			);
@@ -491,10 +529,12 @@
 			files = (
 				9AF87DDC235CCA09001E5B79 /* UsersViewController.m in Sources */,
 				9AD1036B235CAC0300545ADD /* SceneDelegate.m in Sources */,
+				9AF87DE5235CE59F001E5B79 /* User.m in Sources */,
 				9A2D5BC2235B980E00772C5A /* main.m in Sources */,
 				9A2D5BAE235B980C00772C5A /* AppDelegate.m in Sources */,
 				9A2D5BBA235B980C00772C5A /* SearchUsersGit.xcdatamodeld in Sources */,
 				9AD10375235CB13C00545ADD /* UtilsViewController.m in Sources */,
+				9AF87DEB235CEC5F001E5B79 /* UserMainTableViewCell.m in Sources */,
 				9AD1036E235CAF0E00545ADD /* LoginViewController.m in Sources */,
 				9AF87DE1235CCDE8001E5B79 /* ApiClient.m in Sources */,
 			);

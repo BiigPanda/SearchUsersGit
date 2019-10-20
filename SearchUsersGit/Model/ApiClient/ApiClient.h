@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "AFNetworking.h"
+#import "User.h"
 
 @interface ApiClient : NSObject
+
++ (void ) initialCall;
++ (NSMutableArray *) parse:(NSDictionary *) JSON;
+@property (weak, nonatomic, readwrite) NSMutableArray *allUsers;
+
+
 
 @end
 
